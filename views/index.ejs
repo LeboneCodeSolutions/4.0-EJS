@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <% if (posts.length > 0) { %>
+    <h1>Posts:</h1>
+    <% posts.forEach(post => { %>
+      <div>
+        <p><%= post %></p>
+      </div>
+    <% }) %>
+  <% } else { %>
+    <h1>Fill in the form below:</h1>
+  <% } %>
+  
+  <!-- Create Blog Form -->
+  <form class="create_blog" action="/" method="post">
+    <h3>Create a Blog Post</h3>
+    <label for="author_name">Published By:</label>
+    <input type="text" name="author_name" id="author_name" class="author_name">
+    
+    <br><br>
+    
+    <label for="article_name">Article Name:</label>
+    <input type="text" name="article_name" id="article_name" class="article_name">
+    <br><br>
+  
+    <textarea name="new_post" id="new_post" class="new_post"></textarea>
+    
+    <br><br>
+    
+    <button type="submit">Post</button>
+  </form>
+  
+</body>
+</html>
