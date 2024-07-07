@@ -11,7 +11,12 @@
     <h1>Posts:</h1>
     <% posts.forEach(post => { %>
       <div>
-        <p><%= post %></p>
+        <h2><%= post.article_name %></h2>
+        <h3>by <%= post.author_name %></h3>
+        <p><%= post.new_post %></p>
+        <form action="/delete/<%= post.id %>" method="post">
+          <button type="submit">Delete</button>
+        </form>
       </div>
     <% }) %>
   <% } else { %>

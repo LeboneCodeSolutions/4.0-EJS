@@ -2,6 +2,7 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { v4 as uuidv4 } from 'uuid'; // Importing UUID for unique identifiers
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -22,8 +23,20 @@ app.get('/', (req, res) => {
 });
 
 app.post('/', (req, res) => {
-    const new_post = req.body['new_post'];
-    posts.push(new_post);
+    const { author_name, article_name, new_post } = req.body;
+    const post = {
+        id: uuidv4(), // Assigning a unique ID to each post
+        author_name,
+        article_name,
+        new_post
+    };
+    posts.push(post);
+    res.render('index', { posts: posts });
+});
+
+app.post('/delete/:id', (req, res) => {
+    const postId = req.params.id;
+    posts = posts.filter(post => post.id !== postId);
     res.render('index', { posts: posts });
 });
 
