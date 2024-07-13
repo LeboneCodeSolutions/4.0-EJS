@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit Post</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <h3>Edit Blog Post</h3>
+  <div class="edit_form">
+    <form class="edit_blog" action="/edit/<%= post.id %>" method="post">
+      <label for="author_name">Published By:</label>
+      <input type="text" name="author_name" id="author_name" class="author_name" value="<%= post.author_name %>">
+
+      <br><br>
+
+      <label for="article_name">Article Name:</label>
+      <input type="text" name="article_name" id="article_name" class="article_name" value="<%= post.article_name %>">
+      <br><br>
+
+      <textarea name="new_post" id="new_post" class="new_post"><%= post.new_post %></textarea>
+
+      <br><br>
+
+      <button type="submit">Update</button>
+    </form>
+  </div>
+</body>
+
+</html>

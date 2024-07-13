@@ -1,46 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/style.css">
 </head>
+
 <body>
-  
-  <% if (posts.length > 0) { %>
-    <h1>Posts:</h1>
-    <% posts.forEach(post => { %>
-      <div>
-        <h2><%= post.article_name %></h2>
-        <h3>by <%= post.author_name %></h3>
-        <p><%= post.new_post %></p>
-        <form action="/delete/<%= post.id %>" method="post">
-          <button type="submit">Delete</button>
-        </form>
+  <nav class="navbar navbar-expand-lg bg-transparent">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">CodeCrafters Hub</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ms-auto">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link" href="#">Features</a>
+          <a class="nav-link" href="#">Pricing</a>
+        </div>
       </div>
-    <% }) %>
+    </div>
+  </nav>
+
+
+  <div class="image_header">
+    <img class="main-img" src="/css/image-library/Unknown.png" alt="Main Image">
+  </div>
+  
+  
+
+  <% if (posts.length > 0) { %>
+    <div class="middle-section">
+    <h1 class="latest_news_heading">Latest News</h1>
+    <div class="posts_container">
+      <% posts.forEach(post => { %>
+        <div class="posted_form">
+          <div class="form_contents">
+            <h3 class="article_name_posted"><%= post.article_name %></h3>
+            <p class="author_name_posted">by <%= post.author_name %></p>
+            <p class="new_post_posted"><%= post.new_post %></p>
+            <form action="/delete/<%= post.id %>" method="post">
+              <button type="submit" class="delete_btn">Delete</button>
+            </form>
+            <form action="/edit/<%= post.id %>" method="get">
+              <button type="submit" class="edit_btn">Edit</button>
+            </form>
+          </div>
+        </div>
+      <% }) %>
+    </div>
+  </div>
   <% } else { %>
-    <h1>Fill in the form below:</h1>
+    
   <% } %>
   
+
   <!-- Create Blog Form -->
-  <form class="create_blog" action="/" method="post">
-    <h3>Create a Blog Post</h3>
-    <label for="author_name">Published By:</label>
-    <input type="text" name="author_name" id="author_name" class="author_name">
-    
-    <br><br>
-    
-    <label for="article_name">Article Name:</label>
-    <input type="text" name="article_name" id="article_name" class="article_name">
-    <br><br>
-  
-    <textarea name="new_post" id="new_post" class="new_post"></textarea>
-    
-    <br><br>
-    
-    <button type="submit">Post</button>
-  </form>
-  
+  <div class="create_form">
+    <form class="create_blog" action="/" method="post">
+
+      <h3 class="blog_post_heading">Create a Blog Post</h3>
+      <label for="author_name">Published By:</label>
+      <input type="text" name="author_name" id="author_name" class="author_name">
+
+      <br><br>
+
+      <label for="article_name">Article Name:</label>
+      <input type="text" name="article_name" id="article_name" class="article_name">
+      <br><br>
+<label for="new_post">Description:</label>
+      <textarea name="new_post" id="new_post" class="new_post textarea has-fixed-size"></textarea>
+
+      <br><br>
+
+      <button type="submit"  class="submit_btn" name="submit_btn">Post</button>
+    </form>
+  </div>
 </body>
+
 </html>
