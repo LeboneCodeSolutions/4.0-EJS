@@ -210,3 +210,12 @@ a:hover {
     background-color: #ff6f61;
     width: 100%;
 }
+.footer-container{
+   padding-top: 50px;
+}
+.footer-heading{
+    color: #ffffff;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
