@@ -14,13 +14,14 @@
   <nav class="navbar navbar-expand-lg bg-transparent">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">CodeCrafters Hub</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav ms-auto">
           <a class="nav-link active" aria-current="page" href="#">Home</a>
-          <a class="nav-link" href="#">Features</a>
+          <a class="nav-link" href="#" style="color: #ff6f61">Articles</a>
           <a class="nav-link" href="#">Pricing</a>
         </div>
       </div>
@@ -29,58 +30,89 @@
 
 
   <div class="image_header">
-    <img class="main-img" src="/css/image-library/Unknown.png" alt="Main Image">
-  </div>
-  
-  
+    <div class="main-text">
 
-  <% if (posts.length > 0) { %>
-    <div class="middle-section">
-    <h1 class="latest_news_heading">Latest News</h1>
-    <div class="posts_container">
-      <% posts.forEach(post => { %>
-        <div class="posted_form">
-          <div class="form_contents">
-            <h3 class="article_name_posted"><%= post.article_name %></h3>
-            <p class="author_name_posted">by <%= post.author_name %></p>
-            <p class="new_post_posted"><%= post.new_post %></p>
-            <form action="/delete/<%= post.id %>" method="post">
-              <button type="submit" class="delete_btn">Delete</button>
-            </form>
-            <form action="/edit/<%= post.id %>" method="get">
-              <button type="submit" class="edit_btn">Edit</button>
-            </form>
-          </div>
-        </div>
-      <% }) %>
-    </div>
-  </div>
-  <% } else { %>
+      <h1 class="website-heading">Welcome to CodeCrafters Hub </h1> 
+      <p class="website-description"> Your ultimate destination for all things code! Dive into a vibrant community where
+      creativity meets technology. From hot tips and tricks to in-depth tutorials, our hub is designed for developers of
+      all levels. Join us to explore cutting-edge trends, share your latest projects, and collaborate with fellow code
+      enthusiasts. Whether you're a newbie or a seasoned pro, CodeCrafters Hub is the perfect place to craft your coding
+      skills and stay ahead of the curve. Let’s code, create, and innovate together!</p>
     
-  <% } %>
+    <button class="join-btn">Join Us</button>
   
-
-  <!-- Create Blog Form -->
-  <div class="create_form">
-    <form class="create_blog" action="/" method="post">
-
-      <h3 class="blog_post_heading">Create a Blog Post</h3>
-      <label for="author_name">Published By:</label>
-      <input type="text" name="author_name" id="author_name" class="author_name">
-
-      <br><br>
-
-      <label for="article_name">Article Name:</label>
-      <input type="text" name="article_name" id="article_name" class="article_name">
-      <br><br>
-<label for="new_post">Description:</label>
-      <textarea name="new_post" id="new_post" class="new_post textarea has-fixed-size"></textarea>
-
-      <br><br>
-
-      <button type="submit"  class="submit_btn" name="submit_btn">Post</button>
-    </form>
   </div>
+    <img class="main-img" src="/css/image-library/Unknown.png" alt="Main Image">
+
+  </div>
+
+  <% if (posts.length> 0) { %>
+    <div class="middle-section">
+      <h1 class="latest_news_heading">News Cafe</h1>
+      <div class="posts_container">
+        <% posts.forEach(post=> { %>
+          <div class="posted_form">
+            <div class="form_contents">
+              <h3 class="article_name_posted">
+                <%= post.article_name %>
+              </h3>
+              <p class="author_name_posted">by <%= post.author_name %>
+              </p>
+              <p class="new_post_posted">
+                <%= post.new_post %>
+              </p>
+              <form action="/delete/<%= post.id %>" method="post">
+                <button type="submit" class="delete_btn">Delete</button>
+              </form>
+              <form action="/edit/<%= post.id %>" method="get">
+                <button type="submit" class="edit_btn">Edit</button>
+              </form>
+            </div>
+          </div>
+          <% }) %>
+      </div>
+    </div>
+    <% } else { %>
+
+      <% } %>
+
+        <!-- Create Blog Form -->
+        <div class="create_form">
+          <form class="create_blog" action="/" method="post">
+
+            <h3 class="blog_post_heading">Compose an Article</h3>
+            <label for="author_name">Published By:</label>
+            <input type="text" name="author_name" id="author_name" class="author_name">
+
+            <br>
+
+            <label for="article_name">Article Name:</label>
+            <input type="text" name="article_name" id="article_name" class="article_name">
+            <br>
+            <label for="new_post">Description:</label>
+            <textarea name="new_post" id="new_post" class="new_post textarea has-fixed-size"></textarea>
+
+            <br>
+
+            <button type="submit" class="submit_btn" name="submit_btn">Post</button>
+            <br>
+          </form>
+        </div>
+
+
+
+
+
+        <div class="footer-background">
+
+          <p style="font-size: 15px;"> Your ultimate destination for all things code! Dive into a vibrant community where
+            creativity meets technology. From hot tips and tricks to in-depth tutorials, our hub is designed for developers of
+            all levels. Join us to explore cutting-edge trends, share your latest projects, and collaborate with fellow code
+            enthusiasts. Whether you're a newbie or a seasoned pro, CodeCrafters Hub is the perfect place to craft your coding
+            skills and stay ahead of the curve. Let’s code, create, and innovate together!</p>
+          
+
+        </div>
 </body>
 
 </html>
