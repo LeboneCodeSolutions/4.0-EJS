@@ -33,7 +33,8 @@ app.post('/', (req, res) => {
         id: uuidv4(),
         author_name,
         article_name,
-        new_post
+        new_post,
+        date: new Date()
     };
     posts.push(post);
     res.render('index', { posts: posts });
@@ -50,7 +51,13 @@ app.get('/edit/:id', (req, res) => {
     const post = posts.find(p => p.id === postId);
     res.render('edit', { post: post });
 });
-
+app.get('/post/:id', (req, res) => {
+    const postId = req.params.id;
+    const post = posts.find(p => p.id === postId);
+  
+    res.render('post', { post });
+  });
+  
 app.post('/edit/:id', (req, res) => {
     const postId = req.params.id;
     const { author_name, article_name, new_post } = req.body;
