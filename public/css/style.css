@@ -1,5 +1,7 @@
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Questrial", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     background-color: #f7f8fc;
     margin: 0;
     padding: 0;
@@ -15,8 +17,15 @@ body {
     font-size: 15px;
     color: #ff6f61
 }
-
+p{
+    font-family: "Questrial", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
 h1 {
+    font-family: "Questrial", sans-serif;
+    font-weight: 450;
+    font-style: normal;
     color: #ff6f61;
 }
 
@@ -132,11 +141,16 @@ a:hover {
 }
 
 .author_name_posted {
-    font-size: 12px;
+    font-family: "Mitr", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 10.5px;
+    color: #c5c5c5d9;
 }
 
 .new_post_posted {
-    font-size: 14px;
+    font-size: 12px;
+    color: #c5c5c5d9;
 }
 
 .posted_form {
@@ -190,8 +204,13 @@ a:hover {
 
 .article_name_posted {
     font-size: 1.8em;
+    color:#737373d9;
+    margin-top: 10px;
     margin-bottom: 10px;
-    font-weight: bold;
+    font-family: "Mitr", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    
 }
 
 .delete_btn, .edit_btn {
@@ -206,6 +225,7 @@ a:hover {
     color: #ff6f61;
     padding: 3px 30px;
     border-color: #ff6f61;
+    border: none;
     border-radius: 50px;
     transition: background-color 0.3s ease;
 }
@@ -233,14 +253,44 @@ a:hover {
     padding: 20px;
 }
 .navbar-nav .nav-link {
-    margin-right: 20px; /* Add margin to the right of each anchor tag */
-  }
-  .navbar-nav .join-btn {
-    margin-left: 15px; /* Add margin to the left of the button */
-  }
+    margin-right:20px; /* Add margin to the right of each anchor tag */
+        font-family: "Questrial", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+}
+ 
 
-
-
+  .sign_up_class {
+    display: flex;
+    align-items: center;
+    margin:auto;
+}
+.sign_up_class input[type="email"] {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    margin-right: -5px;
+}
+.sign_up_class button {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
   .sign-up{
     width: 40%;
+   margin-top: 40px;
+    margin-left: 25%;
   }
+
+  .sign-up-btn{
+
+        font-family: "Questrial", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+ 
+     margin-top: 30px;
+  }
+
+  .fa-user-secret{
+    color:#737373d9;
+  }
+
+  

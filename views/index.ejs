@@ -11,6 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@200;300;400;500;600;700&family=Questrial&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 </head>
 
@@ -28,13 +29,12 @@
           <a class="nav-link" href="#">Articles</a>
           <a class="nav-link" href="#">Docs</a>
           <a class="nav-link" href="#">Help</a>
-          <button class="join-btn btn btn-outline-secondary">Sign In</button>
+          <button class="join-btn btn btn-outline-secondary"><strong>SIGN IN</strong></button>
 
         </div>
       </div>
     </div>
   </nav>
-
 
   <div class="image_header">
     <div class="main-text">
@@ -47,8 +47,7 @@
         create, and innovate together!</p>
 <form class="sign_up_class">
     <input class="sign-up" type="email">
-    <button>Sign  Up</button>
-
+    <button class="sign-up-btn">Sign Up</button>
 </form>
     
 
@@ -68,10 +67,12 @@
               <h3 class="article_name_posted">
                 <%= post.article_name %>
               </h3>
-              <p class="author_name_posted">by <%= post.author_name %>
-              </p>
               <p class="new_post_posted">
                 <%= post.new_post %>
+              </p>
+
+          
+              <p class="author_name_posted"><i class="fa-solid fa-user-secret"></i> <%= post.author_name %>
               </p>
               <form action="/delete/<%= post.id %>" method="post">
                 <button type="submit" class="delete_btn">Delete</button>
