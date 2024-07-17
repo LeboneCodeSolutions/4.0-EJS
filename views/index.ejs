@@ -11,7 +11,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@400;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@200;300;400;500;600;700&family=Questrial&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@200;300;400;500;600;700&family=Questrial&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 </head>
 
@@ -45,11 +46,11 @@
         projects, and collaborate with fellow code enthusiasts. Whether you're a beginner or a seasoned pro,
         CodeCrafters Hub is the perfect place to enhance your coding skills and stay ahead of the curve. Let's code,
         create, and innovate together!</p>
-<form class="sign_up_class">
-    <input class="sign-up" type="email">
-    <button class="sign-up-btn">Sign Up</button>
-</form>
-    
+      <form class="sign_up_class">
+        <input class="sign-up" type="email">
+        <button class="sign-up-btn">Sign Up</button>
+      </form>
+
 
 
     </div>
@@ -60,6 +61,7 @@
   <% if (posts.length> 0) { %>
     <div class="middle-section">
       <h1 class="latest_news_heading">News Cafe</h1>
+      <hr class="hr-1">
       <div class="posts_container">
         <% posts.forEach(post=> { %>
           <div class="posted_form">
@@ -67,18 +69,25 @@
               <h3 class="article_name_posted">
                 <%= post.article_name %>
               </h3>
+
               <p class="new_post_posted">
                 <%= post.new_post %>
               </p>
 
-          
-              <p class="author_name_posted"><i class="fa-solid fa-user-secret"></i> <%= post.author_name %>
-              </p>
-              <form action="/delete/<%= post.id %>" method="post">
-                <button type="submit" class="delete_btn">Delete</button>
-              </form>
+              <div class="post-meta">
+                <p class="author_name_posted">
+                  <i class="fa-solid fa-user-secret"></i>
+                  <%= post.author_name %>
+                </p>
+                <p class="date-posted">
+                  <i class="fa-solid fa-calendar"></i>
+                  <%= new Date(post.date).toLocaleString('en-US', { day: 'numeric' , month: 'long' }) %>
+                </p>
+              </div>
+
+
               <form action="/edit/<%= post.id %>" method="get">
-                <button type="submit" class="edit_btn">Edit</button>
+                <button type="submit" class="edit_btn">Edit Post</button>
               </form>
             </div>
           </div>
@@ -107,20 +116,39 @@
 
             <br>
 
-            <button type="submit" class="submit_btn" name="submit_btn">Post</button>
+            <button type="submit" class="submit_btn" name="submit_btn">POST</button>
             <br>
           </form>
         </div>
 
-
-
-
-
         <div class="footer-background">
           <div class="footer-container">
-            <h2 class="footer-heading"> Ready to join the community ?</h2>
+            <h2 class="footer-heading"> Let’s connect! Stay up to date with all things CodeCrafters Hub.</h2>
+
+            <form class="subscribe-form">
+              <div class="subscription-section">
+
+                <input class="subsriber-name" placeholder="First Name">
+                <input class="subscriber-email" placeholder="Email Address">
+
+                <button class="submit-subscription-email">SUBSCRIBE</button>
+              </div>
+
+            </form>
+    
+            <div class="social-tags">
+              <p class="creator-name"> © 2024 Lebone Ngobese</p>
+              <div class="social-media-icons">
+                <p>
+                  Conduct</p>
+                <p> Terms of Use & Privacy</p>
+                <p>Disclosures</p>
 
 
+                <i class="fa-brands fa-linkedin-in"></i>
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+            </div>
           </div>
         </div>
 </body>
