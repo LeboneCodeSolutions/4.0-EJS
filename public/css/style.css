@@ -12,17 +12,20 @@ body {
     font-family: "Rowdies", sans-serif;
     font-weight: 400;
     font-style: normal;
-  }
-.code-icon{
+}
+
+.code-icon {
 
     font-size: 12px;
     color: #ff6f61
 }
-p{
+
+p {
     font-family: "Questrial", sans-serif;
     font-weight: 300;
     font-style: normal;
 }
+
 h1 {
     font-family: "Questrial", sans-serif;
     font-weight: 450;
@@ -62,7 +65,8 @@ form {
     margin-top: 20px;
 }
 
-input, textarea {
+input,
+textarea {
     border: 1px solid #ddd;
     display: block;
     margin: 10px 0;
@@ -99,7 +103,9 @@ a:hover {
     margin-top: 50px;
 }
 
-.create_form, .blog_post_heading, .form_contents {
+.create_form,
+.blog_post_heading,
+.form_contents {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -142,7 +148,8 @@ a:hover {
     margin: auto;
 }
 
-.author_name_posted,.date-posted {
+.author_name_posted,
+.date-posted {
     font-family: "Mitr", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -207,20 +214,22 @@ a:hover {
 
 .article_name_posted {
     font-size: 1.8em;
-    color:#737373d9;
+    color: #737373d9;
     margin-top: 10px;
     margin-bottom: 10px;
     font-family: "Mitr", sans-serif;
     font-weight: 400;
     font-style: normal;
-    
+
 }
 
-.delete_btn, .edit_btn {
+.delete_btn,
+.edit_btn {
     margin-right: 10px;
 }
 
-.delete_btn, .edit_btn {
+.delete_btn,
+.edit_btn {
     margin-top: 10px;
 }
 
@@ -238,15 +247,17 @@ a:hover {
 }
 
 /* Footer*/
-.footer-background{
+.footer-background {
     margin-top: 5%;
     background-color: #ff6f61;
     width: 100%;
 }
-.footer-container{
-   padding-top: 50px;
+
+.footer-container {
+    padding-top: 50px;
 }
-.footer-heading{
+
+.footer-heading {
     font-size: 30px;
     font-family: "Questrial", sans-serif;
     font-weight: 800;
@@ -258,99 +269,240 @@ a:hover {
 }
 
 /* Subscriber Form*/
-.subscription-section{
+.subscription-section {
     justify-content: center;
     display: flex;
     align-items: center;
     gap: 20px;
     margin-top: 40px;
-   margin-left: 30px;
+    margin-left: 30px;
 }
 
-.subscriber-email,.subsriber-name{
-    width:20%;
+.subscriber-email,
+.subsriber-name {
+    width: 20%;
     padding: 10px;
     font-size: 16px;
 }
 
-.submit-subscription-email{
+.submit-subscription-email {
     padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
+    font-size: 16px;
+    cursor: pointer;
 }
 
 .social-tags {
     margin-top: 80px;
     color: #f7f8fc;
     display: flex;
-    justify-content: space-between; /* This will position the text and icons on opposite sides */
-    align-items: center; /* This vertically centers the items */
-    padding: 10px; /* Adjust padding as needed */
-  }
-  
-  .social-media-icons {
-    display: flex;
-    gap: 50px; /* Adjust the space between icons */
-    margin-right: 50px;
-  }
-  
-  .social-media-icons i {
-    font-size: 17px; /* Adjust icon size as needed */
-    cursor: pointer; /* Adds a pointer cursor on hover */
-  }
+    justify-content: space-between;
+    /* This will position the text and icons on opposite sides */
+    align-items: center;
+    /* This vertically centers the items */
+    padding: 10px;
+    /* Adjust padding as needed */
+}
 
-  .creator-name{
+.social-media-icons {
+    display: flex;
+    gap: 50px;
+    /* Adjust the space between icons */
+    margin-right: 50px;
+}
+
+.social-media-icons i {
+    font-size: 17px;
+    /* Adjust icon size as needed */
+    cursor: pointer;
+    /* Adds a pointer cursor on hover */
+}
+
+.creator-name {
     font-size: 15px;
-  }
-  
+}
+
 /* nav bar*/
-.navbar-nav{
+.navbar-nav {
     padding: 20px;
 }
-.navbar-nav .nav-link {
-    margin-right:20px; /* Add margin to the right of each anchor tag */
-        font-family: "Questrial", sans-serif;
-        font-weight: 400;
-        font-style: normal;
-}
- 
 
-  .sign_up_class {
+.navbar-nav .nav-link {
+    margin-right: 20px;
+    /* Add margin to the right of each anchor tag */
+    font-family: "Questrial", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+.sign_up_class {
     display: flex;
     align-items: center;
-    margin:auto;
+    margin: auto;
 }
+
 .sign_up_class input[type="email"] {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
     margin-right: -5px;
 }
+
 .sign_up_class button {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
 }
-  .sign-up{
+
+.sign-up {
     width: 40%;
-   margin-top: 40px;
+    margin-top: 40px;
     margin-left: 25%;
-  }
+}
 
-  .sign-up-btn{
+.sign-up-btn {
 
-        font-family: "Questrial", sans-serif;
-        font-weight: 400;
-        font-style: normal;
- 
-     margin-top: 30px;
-  }
+    font-family: "Questrial", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+    margin-top: 30px;
+}
 
 
-  .hr-1{
+.hr-1 {
     margin-left: 25px;
     width: 3%;
-  }
+}
 
 
-.date-posted{
-     font-size: 10px;
+.date-posted {
+    font-size: 10px;
+}
+
+/*  Edit Blog Post Page*/
+input {
+    width: 80%;
+}
+
+.new_post {
+    width: 170%;
+}
+
+.edit-post-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.edit_form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 500px;
+    /* Adjust the max-width as needed */
+}
+
+.delete-btn,
+.update-btn {
+    float: left;
+}
+
+
+
+button {
+    width: 100%;
+    padding: 10px;
+    margin: 5px;
+    box-sizing: border-box;
+}
+
+/* Documentation Page */
+
+.section-1,
+.section-2,
+.section-3 {
+    padding-bottom: 20px;
+}
+
+.section-4 {
+    padding-bottom: 50px;
+}
+
+.section-1 {
+    background-color: white;
+    margin-top: -5px;
+
+}
+
+.page-heading {
+    color: black;
+    padding-top: 50px;
+    font-family: "Rowdies", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 30px;
+}
+
+.page-subheading-1,
+.page-subheading-2 {
+    font-size: 25px;
+}
+
+.page-subheading-1,
+.page-subheading-3,
+.page-subheading-4,
+.page-subheading-5 {
+    padding-top: 30px;
+}
+
+.page-subheading-2,
+.page-minisubheading-4,
+.page-minisubheading-8 {
+    padding-top: 15px;
+}
+
+.introduction-p,
+.home-page-descriptions,
+.blog-section-description,
+.about-page-description,
+.ejs-templating-paragraph,
+.bootstrap-integration-paragraph,
+.css-flexbox-paragraph,
+.commenting-system-paragraph,
+.writing-articles-paragraph,
+.commenting-paragraph,
+.technologies-used-paragraph,
+.hosting-paragraph {
+    font-size: 13px;
+}
+
+
+.section-2 {
+    color: white;
+    background-color: #ff6f61;
+}
+
+.section-1,
+.section-2,
+.section-3,
+.section-4 {
+    padding-left: 40px;
+
+}
+
+.section-3 {
+    background-color: #333;
+    color: white;
+}
+
+.section-4 {
+    background-color: #6e6d6d;
+    color: white;
+}
+
+.home-page-section,
+.blog-section,
+.about-page {
+    padding-bottom: 10px;
 }

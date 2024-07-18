@@ -68,6 +68,11 @@ app.post('/edit/:id', (req, res) => {
     res.redirect('/');
 });
 
+
+app.get('/documentation',(req,res) =>{
+
+res.render('docs')
+})
 app.listen(3000, () => {
     console.log("Server is running on port 3000");
 });
