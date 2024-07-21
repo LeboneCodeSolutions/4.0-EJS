@@ -184,7 +184,7 @@ a:hover {
 
 .website-description {
     color: #333;
-    font-size: 13px;
+    font-size: 17px;
     line-height: 1.6;
 }
 
@@ -289,6 +289,7 @@ a:hover {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
+    width: 10%;
 }
 
 .social-tags {
@@ -363,8 +364,8 @@ a:hover {
     font-family: "Questrial", sans-serif;
     font-weight: 400;
     font-style: normal;
-
-    margin-top: 30px;
+    width: 20%;
+    margin-top: 35px;
 }
 
 
@@ -379,18 +380,24 @@ a:hover {
 }
 
 /*  Edit Blog Post Page*/
-input {
+.edit_author_name,
+.edit_article_name {
     width: 80%;
 }
 
-.new_post {
+.edit_new_post {
     width: 170%;
+}
+
+.edit-heading{
+    text-align: center;
 }
 
 .edit-post-body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 150px;
 }
 
 .edit_form {
@@ -406,9 +413,18 @@ input {
 .delete-btn,
 .update-btn {
     float: left;
+
+
 }
 
+.delete-btn {
+    margin-top: -5px;
+    margin-left: 20px;
+}
 
+.action-btns {
+    margin-top: -20px;
+}
 
 button {
     width: 100%;
@@ -418,12 +434,20 @@ button {
 }
 
 /* Documentation Page */
+.home-page-screenshot,
+.news-cafe-screenshot,
+.about-us-page-screenshot {
+    width: 30%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
 
 .section-1,
 .section-2,
 .section-3 {
     padding-bottom: 20px;
 }
+
 
 .section-4 {
     padding-bottom: 50px;
@@ -435,21 +459,31 @@ button {
 
 }
 
-.page-heading {
-    color: black;
-    padding-top: 50px;
-    font-family: "Rowdies", sans-serif;
-    font-weight: 300;
-    font-style: normal;
+
+.page-subheading-2 {
+    margin-bottom: 20px;
+}
+
+.page-subheading-2 {
     font-size: 30px;
 }
 
-.page-subheading-1,
-.page-subheading-2 {
-    font-size: 25px;
+.page-minisubheading-1,
+.page-minisubheading-2,
+.page-minisubheading-3 {
+    margin-top: 20px;
 }
 
-.page-subheading-1,
+
+.page-subheading-3,
+.page-minisubheading-4,
+.ejs-templating-paragraph,
+.page-minisubheading-5,
+.bootstrap-integration-paragraph,
+.page-minisubheading-6, .css-flexbox-paragraph, .page-minisubheading-7, .commenting-system-paragraph {
+    color: black;
+}
+
 .page-subheading-3,
 .page-subheading-4,
 .page-subheading-5 {
@@ -462,7 +496,7 @@ button {
     padding-top: 15px;
 }
 
-.introduction-p,
+
 .home-page-descriptions,
 .blog-section-description,
 .about-page-description,
@@ -474,7 +508,9 @@ button {
 .commenting-paragraph,
 .technologies-used-paragraph,
 .hosting-paragraph {
-    font-size: 13px;
+    font-size: 15px;
+    line-height: 27px;
+    text-align: justify;
 }
 
 
@@ -505,4 +541,127 @@ button {
 .blog-section,
 .about-page {
     padding-bottom: 10px;
+}
+
+/*  About Page*/
+
+.banner-img {
+    width: 43%;
+}
+
+.page-main {
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about-us-heading {
+    padding-top: 50px;
+    font-family: "Rowdies", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 90px;
+    text-align: center;
+    margin-bottom: 30px;
+
+
+}
+
+.page-main-text {
+    margin-top: -20px;
+}
+
+.about-us-paragraph {
+    margin-left: 20px;
+    line-height: 25px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.learn-more {
+    width: 15%;
+}
+
+.learn-more-container {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.main-body {
+    padding-top: 50px;
+    background-color: #ffffff;
+    padding-bottom: 100px;
+}
+
+.meet-our-team-heading,
+.mission-statement-heading {
+    text-align: center;
+    font-family: "Rowdies", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 50px;
+
+}
+
+.footer-background-1 {
+    margin-top: -50px;
+}
+
+.meet-our-team-description {
+    text-align: center;
+
+}
+
+.member-img-1 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 9%;
+    border-radius: 50%;
+}
+
+
+.team-memeber-01 {
+    margin-top: 4%;
+}
+
+.member-01-name,
+.member-01-role {
+    text-align: center;
+}
+
+.member-01-name {
+    margin-top: 20px;
+}
+
+.member-01-role {
+    margin-top: -15px;
+}
+
+.icon-1 {
+    width: 20px;
+    color: #0077B5;
+
+}
+
+.member-01-social-icons {
+    margin-top: -5px;
+    gap: 0.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mission-statement-heading,
+.meet-our-team-heading {
+    margin-bottom: 20px;
+}
+
+.mission-statement-heading {
+    margin-top: 4%;
+}
+
+.mission-statement-paragraph {
+    text-align: center;
 }

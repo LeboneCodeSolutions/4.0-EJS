@@ -73,6 +73,11 @@ app.get('/documentation',(req,res) =>{
 
 res.render('docs')
 })
+
+app.get('/about', (req,res) =>{
+
+    res.render('about');
+})
 app.listen(3000, () => {
     console.log("Server is running on port 3000");
 });
